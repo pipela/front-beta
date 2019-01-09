@@ -6,7 +6,7 @@ class BaseLayout extends Component{
         const props = this.props
         return(
             <React.Fragment>
-                <Header />
+                <Header title="Hello from Header"/>
                 {props.children}
             </React.Fragment>
         )

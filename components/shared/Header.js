@@ -1,14 +1,17 @@
 import React , {Component} from 'react'
 import Link from 'next/link'
+import '../../styles/main.scss'
 
 class Header extends Component{
     render(){
+        const tItle = this.props.title
         return(
             <React.Fragment>
                 <p className="cus">Im style add</p>
                 <p className="cusFF">Im style add</p>
+                <h1>{tItle}</h1>
                 <Link href="/">
-                    <a>Home</a>
+                    <a style={{'fontSize':'20px'}}>Home</a>
                 </Link>
                 <Link href="/about">
                     <a>About</a>
@@ -26,13 +29,10 @@ class Header extends Component{
                 <style jsx>
                 {`
                     a{
-                        font-size : 19px
+                        fontSize : 19px
                     }
                     .cus{
                         color: red
-                    }
-                    .cusFF{
-                        color: blue
                     }
                 `}
                 </style>
