@@ -13,7 +13,7 @@ class Index extends Component{
             console.log.error(err)
         }
 
-        return {initialData: [1,2,3,4] , userData}
+        return {useData:userData.splice(0,10)}
     }
     constructor(props) {
         super(props)
