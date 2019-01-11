@@ -21,7 +21,7 @@ class Ports extends Component{
             useData.map((post)=>{
                 return(
                     <div>
-                        <li>{post.id} - {post.title}  == </li>
+                        <li>{post.id} - {post.title}</li>
                     </div>
                 )
             })
