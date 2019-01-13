@@ -24,7 +24,7 @@ class Ports extends Component{
                         <li>
                             <Link route={`/p/${post.id}`}>
                                 <a>
-                                    {post.id} - {post.title}
+                                    {post.id} s- {post.title}
                                 </a>
                             </Link>
                         </li>
