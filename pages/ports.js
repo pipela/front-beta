@@ -1,9 +1,12 @@
 import React , {Component} from 'react'
 import BaseLayout from '../components/layouts/BaseLayout'
-import Port from './port'
 import axios from 'axios'
+import Link from 'next/link'
+import {withRouter} from 'next/router'
 
 class Ports extends Component{
+
+
     static async getInitialProps(){
         let userData = []
         try{
@@ -16,17 +19,25 @@ class Ports extends Component{
 
         return {useData : userData.splice(0,10)}
     }
+
+
     renderPosts(useData) {
         return(
             useData.map((post)=>{
                 return(
                     <div>
-                        <li>{post.id} - {post.title}  == </li>
+                        <li>
+                            <Link as={`/port/${post.id}`} href={`/port?title=${post.title}`}>
+                                <a>{post.id} - {post.title}==</a>
+                            </Link>
+                        </li>
                     </div>
                 )
             })
         )
     }
+
+
     render(){
         const { useData } = this.props
         //console.log(useData)
@@ -40,4 +51,4 @@ class Ports extends Component{
         )
     }
 }
-export default Ports
+export default withRouter(Ports)

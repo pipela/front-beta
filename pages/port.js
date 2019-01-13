@@ -1,14 +1,17 @@
 import React , {Component} from 'react'
+import BaseLayout from '../components/layouts/BaseLayout'
+import {withRouter} from 'next/router'
 
 class Port extends Component{
     render(){
+        const titles = this.props
         return(
-            <div>
+            <BaseLayout>
                 <h3>
-                    นย
+                    {titles.router.query.title}
                 </h3>
-            </div>
+            </BaseLayout>
         )
     }
 }
-export default Port
+export default withRouter(Port)
