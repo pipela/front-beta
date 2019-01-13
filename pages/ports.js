@@ -1,8 +1,7 @@
 import React , {Component} from 'react'
 import BaseLayout from '../components/layouts/BaseLayout'
-import Link from 'next/link'
 import axios from 'axios'
-
+import {Link} from '../routes'
 
 class Ports extends Component{
     static async getInitialProps(){
@@ -23,7 +22,7 @@ class Ports extends Component{
                 return(
                     <h3>
                         <li>
-                            <Link as={`/p/${post.id}`} href={`/port?id=${post.id}`}>
+                            <Link route={`/p/${post.id}`}>
                                 <a>
                                     {post.id} - {post.title}
                                 </a>

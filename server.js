@@ -1,20 +1,14 @@
 const express = require('express')
 const next = require('next')
+const routes = require('./routes')
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
-const handle = app.getRequestHandler()
+const handle = routes.getRequestHandler(app)
 
 app.prepare()
 .then(() => {
 const server = express()
-
-    server.get('/p/:ids', (req, res) => {
-        const actualPage = '/port'
-        const queryParams = { id: req.params.ids }
-        app.render(req, res, actualPage, queryParams)
-    })
-
 server.get('*', (req, res) => {
     return handle(req, res)
 })
