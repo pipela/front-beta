@@ -14,7 +14,7 @@ class Ports extends Component{
             console.log.error(err)
         }
 
-        
+
         return {useData : userData.splice(0,10)}
     }
     renderPosts(useData) {
@@ -25,7 +25,7 @@ class Ports extends Component{
                         <li>
                             <Link route={`/p/${post.id}`}>
                                 <a>
-                                    {post.id} s- {post.title}
+                                    {post.id} sd- {post.title}
                                 </a>
                             </Link>
                         </li>
