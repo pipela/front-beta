@@ -11,7 +11,7 @@ class Port extends Component{
             const respons = await axios.get(`https://jsonplaceholder.typicode.com/posts/${getId}`)
             console.log("res1:: " ,respons)
             useData = respons.data
-            console.log("res2:: " +useData.title)
+            console.log("res2s:: " +useData.title)
             console.log("res ID:: " +useData.id)
         }
         catch(err){
