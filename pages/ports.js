@@ -1,7 +1,8 @@
 import React , {Component} from 'react'
 import BaseLayout from '../components/layouts/BaseLayout'
-import Port from './port'
+import Link from 'next/link'
 import axios from 'axios'
+
 
 class Ports extends Component{
     static async getInitialProps(){
@@ -20,9 +21,15 @@ class Ports extends Component{
         return(
             useData.map((post)=>{
                 return(
-                    <div>
-                        <li>{post.id} - {post.title}</li>
-                    </div>
+                    <h3>
+                        <li>
+                            <Link as={`/p/${post.id}`} href={`/port?id=${post.id}`}>
+                                <a>
+                                    {post.id} - {post.title}
+                                </a>
+                            </Link>
+                        </li>
+                    </h3>
                 )
             })
         )
