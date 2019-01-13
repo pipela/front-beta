@@ -25,9 +25,7 @@ class Port extends Component{
         const titles = this.props
         return(
             <BaseLayout>
-                <h3>
-                    {titles.router.query.title}
-                </h3>
+
             </BaseLayout>
         )
     }
