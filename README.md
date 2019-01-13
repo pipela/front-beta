@@ -1,3 +1,8 @@
-# front-beta
-Next.JS
-Test basic front-end Next.JS
+# Frontend beta
+# Next.JS
+<p>Basic front-end Next.JS <br/>
+ เขียน และเรียนรู้ตามเว็บ : https://nextjs.org/learn <br/>
+ เข้ามาแชร์กันได้นะครับคนไทยด้วยกัน <br/>
+
+ Library fetch api data ใช้ axios ครับตัวนี้ <br/>
+</p>

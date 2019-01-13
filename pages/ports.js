@@ -17,13 +17,14 @@ class Ports extends Component{
             console.log.error(err)
         }
 
+
         return {useData : userData.splice(0,10)}
     }
 
 
     renderPosts(useData) {
         return(
-            useData.map((post)=>{
+            useData.map((post,index)=>{
                 return(
                     <div>
                         <li>
