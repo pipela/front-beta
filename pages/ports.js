@@ -19,9 +19,9 @@ class Ports extends Component{
     }
     renderPosts(useData) {
         return(
-            useData.map((post)=>{
+            useData.map((post,index)=>{
                 return(
-                    <h3>
+                    <h3 key={index}>
                         <li>
                             <Link route={`/p/${post.id}`}>
                                 <a>

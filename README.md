@@ -1,4 +1,4 @@
-# Front-beta
+# Frontend beta
 # Next.JS
 <p>Basic front-end Next.JS <br/>
  เขียน และเรียนรู้ตามเว็บ : https://nextjs.org/learn <br/>
